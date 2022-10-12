@@ -1,0 +1,15 @@
+table {
+		border: 10px red;
+}
+	td:hover {
+		background-color: CadetBlue;
+		color: AliceBlue;
+	}
+	tr.th{ 
+	background-color: DarkSeaGreen;
+	color: FloralWhite;
+	}
+	tr, td{
+		background-color: MistyRose;
+		color: PaleGreen;
+	}

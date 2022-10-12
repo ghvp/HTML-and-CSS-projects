@@ -1,0 +1,15 @@
+p {
+	color: PapayaWhip;
+	background-color: PeachPuff;
+	font-size: large;
+	text-align: center;
+}
+
+.test_class_2 {
+	color: MintCream;
+	text-align: left;
+	background-color: MistyRose;
+}
+p {
+	text-shadow: 2px 2px #CD5C5C;
+}
