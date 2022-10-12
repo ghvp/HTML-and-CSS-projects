@@ -1,0 +1,23 @@
+ol {
+	list-style-type: lower-roman;
+}
+
+ul{ 
+	list-style-type: circle;
+}
+
+.red_class {
+	color: red ;
+}
+
+.yellow_class {
+	color: yellow ;
+}
+
+.blue_class {
+	color: blue;
+}
+
+h3{
+	text-shadow: 3px 3px #20B2AA;
+}
