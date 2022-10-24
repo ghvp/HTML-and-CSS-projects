@@ -1,0 +1,11 @@
+body {
+    font-family: "Sans-serif", Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+input[type="text"] {
+    width: 500px;
+    margin: 8px;
+    border: 5px solid black;
+    border-radius: 8px;
+}
