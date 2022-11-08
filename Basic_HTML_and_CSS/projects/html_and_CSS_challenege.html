@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width" initial-scale="1">
+    </head>
+    
+    <body>
+
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="main">
+            <p>Test text</p>
+        </div>
+
+
+        <div class="row">
+            <div class="column" style="background-color:#aaa">
+                <h2>column 1</h2>
+                <p>text</p>
+            </div>
+            <div class="column" style="background-color:#bbb">
+                <h2>column 2</h2>
+                <p>text</p>
+            </div>
+        </div>
+
+
+
+        <img src="./images/Thumb/thumbnail_2.jpg" alt="piano " class="center">
+
+        <!--adding text over a picture-->
+        <div class="container1">
+            <img src="./Images/Thumb/thumbnail_3.jpg" alt="..." style="width:100%;">
+            <div class="bottom-left">Bottom Left</div>
+            <div class="top-left">Top Left</div>
+            <div class="top-right">Top Right</div>
+            <div class="bottom-right">Bottom Right</div>
+            <div class="centered">Centered</div>
+          </div>
+        <!--End of adding text over img-->
+
+        <!--image hover overlay-->
+        <div class="container2">
+            <img src="./Images/Thumb/thumbnail_6.jpg" alt=" " class="image">
+            <div class="overlay1">
+                <div class="text">Hover overlay</div>
+            </div>
+        </div>
+        <!--end of image hover overlay-->
+
+        <!--embed downloaded video with text overlay-->
+        <div class="container3">
+            <video width="300" height="600" controls muted autoplay loop>
+                <source src="./Images/challenge_video.mp4" type="video/mp4" alt=" " style="width:100;">    
+            </video>
+            <div class="centered2">Centered</div>
+        </div>    
+        <!--end of embed video-->
+    <style>
+
+        /*two column layout*/
+        * {
+            box-sizing: border-box;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+
+        /* clear floats after the columns*/
+        .row:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+        /*end of clear floats*/
+
+        .column h2 {
+            color: blue;
+        }
+        /* end two column layout*/
+
+        /*img css*/
+        img {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            filter: sepia(100%);
+            border-radius: 15%;
+        }
+        /*end image css*/
+
+        /*Adding hover overlay to img css*/
+        .container2 {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .container2:hover .overlay1 {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        /*end of hover overlay*/
+
+
+        /*table css*/
+        footer{
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table, th, tr {
+            border: 5px solid red;
+            background-color: black;
+        }
+
+        table, td{
+            color: pink;
+            padding: 5px;
+        }
+        /*end of table css*/
+
+        /*this is for adding text over an image*/
+         .container1 {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            }
+
+            .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            }
+
+            .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            }
+
+            .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+            }
+
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+        /*end of adding text over image*/
+
+        /*adding text over video*/
+        .container3 {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            .centered2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+        
+        /*end of adding text over video*/
+
+        /*nav bar css*/
+        .navbar {
+            background-color: pink;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1; /*this helped prevent the images from hiding the nav bar!*/
+        }
+
+        /*links inside nav bar*/
+        .navbar a {
+            color: white;
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /*end links inside nav*/
+
+        /*hover effect*/
+        .navbar a:hover {
+            text-shadow: 1px 1px 30px;
+            background-color: black;
+        }
+        /*end hover effect*/
+
+        .main {
+            margin-top: 30px;
+        }
+        /*end of fixed navbar css*/
+
+        /*hover for p element*/
+        p:hover{
+            background-color: red;
+        }
+        /*end hover for p element*/
+
+    </style>
+
+        <p>This text should have a hover effect</p>
+
+        <!--START TABLE-->
+        <table>
+            <tr>
+                <th>Column 1</th>
+                <th>column 2</th>
+            </tr>
+            <tr>
+                <td>data1</td>
+                <td>data2</td>
+            </tr>
+        </table>
+        <!--END TABLE-->
+        
+
+        <!--begin footer-->
+        <footer>
+            <h3>This is the footer</h3>
+            <p>Footer paragraph</p>
+        </footer>
+        <!--end footer-->
+
+    </body>
+</html>

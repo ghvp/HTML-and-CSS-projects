@@ -3,9 +3,11 @@
 	<head>
 		<title>One Page Website</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<h1>Sharks</h1>
 		<p>This website is dedicated to all types of sharks!</p>
 		<link rel="stylesheet" href="./one_page_website.css/first_CSS.css">
+		<script src="JS/one_page_website.js"></script>
 	</head>
 	
 	<body>
@@ -22,6 +24,82 @@
 	</nav>
 		<!-- nav end -->
 	
+		<!--Images used to open the lightbox-->
+		<div class="row">
+			<div class="column">
+				<img src="images/plant1-small.png" style="width:100%;" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="images/plant2-small.png"  style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="images/plant3-small.png" style="width: 100%;" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="images/plant4-small.png" style="width: 100%;" onclick="openModal();currentSlide(4)" class="hover-shadow"> 
+			</div>
+		</div>
+		<!--END images used to open lightbox-->
+
+		<!--The modal/lightbox-->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<!--making the pictures small to see if it'll fix lol-->
+				<div class="mySlides">
+					<div class="numbertext">1 / 4</div>
+					<img src="images/plant1.png" style="width: 100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 4</div>
+					<img src="images/plant2.png" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 4</div>
+					<img src="images/plant3.png" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 4</div>
+					<img src="images/plant4.png" style="width:100%;">
+				</div>
+				<!--END modal/lightbox-->
+
+				<!--Next/ previous controls-->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				<!--End next/previous controls-->
+
+				<!--Caption text-->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+				<!--END caption text-->
+
+				<!--Thumbnail image controls-->
+				<!--This seemed to work with the imgs being the regular imgs not the small ver but im gonna change to see if it'll fice the spacing issure and align them in one row-->
+				<div class="column">
+					<img class="demo" src="images/plant1-small.png" style="width: 100%;" onclick="currentSlide(1)" alt="plant 1">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="images/plant2-small.png" style="width: 100%;" onclick="currentSlide(2)" alt="plant 2">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="images/plant3-small.png" style="width: 100%;" onclick="currentSlide(3)" alt="plant 3">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="images/plant4-small.png" style="width:100%;" onclick="currentSlide(4)" alt="plant 4">
+				</div>
+				<!--END thumbnail image controls-->
+			</div>
+		</div>
+		
 		<!--Home -->
 	<div>
 		<div id="home">
