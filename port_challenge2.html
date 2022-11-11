@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h3 {
+                width: 100px;
+                height: 100px;
+                background: pink;
+                position: relative;
+                animation: cubemove 5s infinite;
+            }
+
+            @keyframes cubemove {
+                from {top: 0px;}
+                to {top: 200px;}
+            }
+
+            /*zoom in and out effect for images*/
+            @keyframes zoominandout {
+                0% {
+                    transform: scale(1,1);
+                }
+                50% {
+                    transform: scale(1.2,1.2);
+                }
+                100% {
+                    transform: scale(1,1);
+                }
+            }
+
+            .catMove img{
+                animation: zoominandout 15s forwards;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="#first">First</a></li>
+                <li><a href="#second">Second</a></li>
+            </ul>
+        </nav>
+
+        <h1>testing out the keyframes rules</h1>
+        <hr> <!--horizontal rule. makes a line appear over webpage-->
+        <h3></h3>
+
+        <img src="cathug.jpg" class="catMove" alt="two cats hugging each other">
+
+        <div id="first">
+            <h1>first section</h1>
+            <p>text</p>
+            <p>test</p>
+            <p>text</p>
+        </div>
+
+        <div id="second">
+            <h1>second section</h1>
+        </div>
+    </body>
+</html>
